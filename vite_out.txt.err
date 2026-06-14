@@ -1,0 +1,5 @@
+[2m16:42:59[22m [31m[1m[vite][22m[39m [31mInternal server error: EBUSY: resource busy or locked, open 'D:\Documents\作品集网站\src\components\Navbar.css'[39m
+      at async open (node:internal/fs/promises:637:25)
+      at async Object.readFile (node:internal/fs/promises:1269:14)
+      at async loadAndTransform (file:///D:/Documents/%E4%BD%9C%E5%93%81%E9%9B%86%E7%BD%91%E7%AB%99/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:35787:16)
+      at async viteTransformMiddleware (file:///D:/Documents/%E4%BD%9C%E5%93%81%E9%9B%86%E7%BD%91%E7%AB%99/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:37369:24)
