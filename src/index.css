@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #08080D;
+  --bg-surface: #0D0D15;
+  --bg-card: #151520;
+  --bg-card-hover: #1E1E2E;
+  --border-color: #2A2A3A;
+  --border-subtle: #1C1C28;
+  --accent-blue: #60A5FA;
+  --accent-purple: #A78BFA;
+  --accent-cyan: #22D3EE;
+  --accent-pink: #F472B6;
+  --text-primary: #F1F1F5;
+  --text-secondary: #9494A8;
+  --text-muted: #62627A;
+  --gradient-main: linear-gradient(135deg, #A78BFA, #22D3EE);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --max-width: 1700px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(167, 139, 250, 0.25);
+  color: var(--text-primary);
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section {
+  padding: 120px 0;
+  position: relative;
+  /* Lazy render sections below the fold */
+  content-visibility: auto;
+  contain-intrinsic-size: 700px;
+}
+
+.section:first-of-type {
+  content-visibility: visible;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  margin-bottom: 16px;
+  position: relative;
+  padding-left: 48px;
+}
+
+.section-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 32px;
+  height: 1px;
+  background: var(--accent-purple);
+}
+
+.section-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 640px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  .section { padding: 80px 0; }
+  .section-title { font-size: 2rem; }
+}
